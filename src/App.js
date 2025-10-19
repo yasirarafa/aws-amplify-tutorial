@@ -17,6 +17,20 @@ function App() {
           path="/home"
           element={user ? <Home user={user} /> : <Navigate to="/login" />}
         />
+        <Route
+        path="*"
+        element={
+          <div
+          style={{
+                textAlign: "center",
+                marginTop: "100px",
+                fontSize: "24px",
+                color: "#ff4444",
+              }}
+              >
+          404 - No Route Found</div>
+        }
+         />
       </Routes>
     </Router>
   );
